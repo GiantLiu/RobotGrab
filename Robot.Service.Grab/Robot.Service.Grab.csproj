@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3F07FF90-AA43-4C9B-AC80-40FCFDB532CE}</ProjectGuid>
+    <ProjectGuid>{0C075442-9F98-4219-B247-F37706C2E7E0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Robot.IService.Grab</RootNamespace>
-    <AssemblyName>Robot.IService.Grab</AssemblyName>
+    <RootNamespace>Robot.Service.Grab</RootNamespace>
+    <AssemblyName>Robot.Service.Grab</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.8.1.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.8.1\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,14 +44,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ISearchService.cs" />
+    <Compile Include="BaiduSearchService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Robot.Common.Grab\Robot.Common.Grab.csproj">
+      <Project>{6BC66219-2549-4509-9E09-1FD2D3088978}</Project>
+      <Name>Robot.Common.Grab</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Robot.Domain.Grab\Robot.Domain.Grab.csproj">
       <Project>{04dff468-bb19-4e92-aae2-0d923fb17072}</Project>
       <Name>Robot.Domain.Grab</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Robot.Entitys.Grab\Robot.Entitys.Grab.csproj">
+      <Project>{382792c1-9fe4-4955-8528-0464c05373a9}</Project>
+      <Name>Robot.Entitys.Grab</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Robot.IService.Grab\Robot.IService.Grab.csproj">
+      <Project>{3f07ff90-aa43-4c9b-ac80-40fcfdb532ce}</Project>
+      <Name>Robot.IService.Grab</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PhantomJS\_ReqHtml.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PhantomJS\phantomjs.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PhantomJS\_ReqUrl.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

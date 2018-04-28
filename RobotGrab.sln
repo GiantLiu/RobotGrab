@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robot.Grab.Baidu", "Robot.Grab.Baidu\Robot.Grab.Baidu.csproj", "{75B23E5F-37DA-4FA8-9C9F-1348BCDCE2A9}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robot.Entitys.Grab", "Robot.Entitys.Grab\Robot.Entitys.Grab.csproj", "{382792C1-9FE4-4955-8528-0464C05373A9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robot.IService.Grab", "Robot.IService.Grab\Robot.IService.Grab.csproj", "{3F07FF90-AA43-4C9B-AC80-40FCFDB532CE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robot.Domain.Grab", "Robot.Domain.Grab\Robot.Domain.Grab.csproj", "{04DFF468-BB19-4E92-AAE2-0D923FB17072}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robot.WinService.Grab", "Robot.WinService.Grab\Robot.WinService.Grab.csproj", "{C40E5349-9B06-4CC1-871C-04E57D098E59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robot.Service.Grab", "Robot.Service.Grab\Robot.Service.Grab.csproj", "{0C075442-9F98-4219-B247-F37706C2E7E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robot.Common.Grab", "Robot.Common.Grab\Robot.Common.Grab.csproj", "{6BC66219-2549-4509-9E09-1FD2D3088978}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{75B23E5F-37DA-4FA8-9C9F-1348BCDCE2A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{75B23E5F-37DA-4FA8-9C9F-1348BCDCE2A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{75B23E5F-37DA-4FA8-9C9F-1348BCDCE2A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{75B23E5F-37DA-4FA8-9C9F-1348BCDCE2A9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{382792C1-9FE4-4955-8528-0464C05373A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{382792C1-9FE4-4955-8528-0464C05373A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{382792C1-9FE4-4955-8528-0464C05373A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +33,18 @@ Global
 		{04DFF468-BB19-4E92-AAE2-0D923FB17072}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04DFF468-BB19-4E92-AAE2-0D923FB17072}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04DFF468-BB19-4E92-AAE2-0D923FB17072}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C40E5349-9B06-4CC1-871C-04E57D098E59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C40E5349-9B06-4CC1-871C-04E57D098E59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C40E5349-9B06-4CC1-871C-04E57D098E59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C40E5349-9B06-4CC1-871C-04E57D098E59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C075442-9F98-4219-B247-F37706C2E7E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C075442-9F98-4219-B247-F37706C2E7E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C075442-9F98-4219-B247-F37706C2E7E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C075442-9F98-4219-B247-F37706C2E7E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BC66219-2549-4509-9E09-1FD2D3088978}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BC66219-2549-4509-9E09-1FD2D3088978}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BC66219-2549-4509-9E09-1FD2D3088978}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BC66219-2549-4509-9E09-1FD2D3088978}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

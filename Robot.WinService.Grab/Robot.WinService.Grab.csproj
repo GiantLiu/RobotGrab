@@ -4,12 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{75B23E5F-37DA-4FA8-9C9F-1348BCDCE2A9}</ProjectGuid>
+    <ProjectGuid>{C40E5349-9B06-4CC1-871C-04E57D098E59}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Robot.Grab.Baidu</RootNamespace>
-    <AssemblyName>Robot.Grab.Baidu</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <RootNamespace>Robot.WinService.Grab</RootNamespace>
+    <AssemblyName>Robot.WinService.Grab</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -30,13 +31,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationIcon>panda128X128.ico</ApplicationIcon>
-  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="HtmlAgilityPack, Version=1.8.1.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
-      <HintPath>..\packages\HtmlAgilityPack.1.8.1\lib\Net45\HtmlAgilityPack.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -45,10 +40,11 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="Topshelf, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b800c4cfcdeea87b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Topshelf.4.0.4\lib\net452\Topshelf.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\BaiduListItemModel.cs" />
-    <Compile Include="PhantomGrab.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -57,16 +53,26 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="panda128X128.ico" />
-    <Content Include="phantomjs.exe">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="_ReqItem.js">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <None Include="_Req.js">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <ProjectReference Include="..\Robot.Common.Grab\Robot.Common.Grab.csproj">
+      <Project>{6bc66219-2549-4509-9e09-1fd2d3088978}</Project>
+      <Name>Robot.Common.Grab</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Robot.Domain.Grab\Robot.Domain.Grab.csproj">
+      <Project>{04dff468-bb19-4e92-aae2-0d923fb17072}</Project>
+      <Name>Robot.Domain.Grab</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Robot.Entitys.Grab\Robot.Entitys.Grab.csproj">
+      <Project>{382792c1-9fe4-4955-8528-0464c05373a9}</Project>
+      <Name>Robot.Entitys.Grab</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Robot.IService.Grab\Robot.IService.Grab.csproj">
+      <Project>{3f07ff90-aa43-4c9b-ac80-40fcfdb532ce}</Project>
+      <Name>Robot.IService.Grab</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Robot.Service.Grab\Robot.Service.Grab.csproj">
+      <Project>{0c075442-9f98-4219-b247-f37706c2e7e0}</Project>
+      <Name>Robot.Service.Grab</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
